@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap");
+
+$body-bg: #303952;
+$text-color: #dcdde1;
+$card-bg: #273c75;
+$input-bg: #353b48;
+$danger: #f5576c;
+$success: #2ed573;
+$disabled: #7f8fa6;
+$card-border-bg: #bdc3c7;
+
+* {
+  box-sizing: border-box;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+#root {
+  background-color: $body-bg;
+}
+
+nav {
+  background-color: #5352ed;
+}
+
+.nav-title {
+  font-size: 32px;
+  color: $text-color;
+  cursor: pointer;
+}
+
+.link {
+  color: $text-color;
+}
+
+// sections
+.container-fluid {
+  padding-top: 15px;
+}
+
+.section-body {
+  // height: 282px;
+  font-size: 14px;
+  padding: 10px 10px;
+}
+
+.sub-body {
+  padding: 0 20px;
+}
+
+.center-border {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  border-right: 2px solid $text-color;
+}
+
+@media only screen and (max-width: 991.5px) {
+  .center-border {
+    display: none;
+  }
+}
+
+@mixin section-colors {
+  color: $text-color;
+  background-color: $card-bg;
+}
+
+.graph-section {
+  @include section-colors;
+  min-height: 700px;
+}
+
+.search-section,
+.trading-section {
+  @include section-colors;
+  // min-height: 340px;
+}
+
+//sub sections
+.graph-wrapper {
+  height: 500px;
+}
+
+.nav-item {
+  border: none;
+
+  a {
+    color: darken($text-color, 30%);
+  }
+
+  .active {
+    color: $text-color;
+    background-color: $card-bg;
+    border: none;
+    border-bottom: 2px solid $success;
+  }
+}
+
+.account-icon-wrapper {
+  margin: 0.5rem 1rem;
+  height: 30px;
+  width: 30px;
+  border: 1px solid $card-border-bg;
+  border-radius: 15px;
+
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  img:hover {
+    opacity: 0.7;
+  }
+}
+
+// typography
+.section-header {
+  font-size: 24px;
+  padding: 10px 0;
+  border-bottom: 2px solid $text-color;
+}
+
+.sub-header {
+  border-bottom: 1px dashed $text-color;
+}
+
+// input, select
+.input-wrapper {
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.currency-select {
+  height: 30px;
+  width: 70px;
+  margin: 0.5rem 1rem;
+
+  select {
+    box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 1rem;
+    color: $text-color;
+    background-color: $input-bg;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    appearance: none;
+  }
+
+  .material-icons {
+    color: $text-color;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    pointer-events: none;
+  }
+}
+
+input[type="text"],
+input[type="number"],
+#order-type,
+#graph-period {
+  box-sizing: border-box;
+  height: 35px;
+  width: 135px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  color: $text-color;
+  background-color: $input-bg;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  appearance: none;
+}
+
+#graph-type {
+  box-sizing: border-box;
+  height: 35px;
+  width: 180px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  color: $text-color;
+  background-color: $input-bg;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  appearance: none;
+}
+
+input:hover,
+select:hover {
+  background-color: darken($input-bg, 10%);
+}
+
+input:not(:focus)::placeholder {
+  visibility: hidden;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.inc-btn {
+  top: 5%;
+  // background-color: green;
+}
+
+.dec-btn {
+  top: 40%;
+  // background-color: red;
+}
+
+label {
+  pointer-events: none;
+}
+
+label,
+select + label,
+input:empty + label {
+  top: 30%;
+  left: 15%;
+  cursor: text;
+}
+
+label,
+input,
+select {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input:focus + label,
+input:valid + label,
+select:focus + label,
+select:valid + label {
+  top: -30%;
+  left: 5%;
+  letter-spacing: 1px;
+  height: 20px;
+  padding: 0 5px;
+  font-size: 12px;
+  cursor: default;
+}
+
+i {
+  top: 20%;
+  right: 10%;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: $success;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: darken($success, 10%);
+}
+
+// Tabulator Styling
+.tabulator {
+  margin-top: 20px;
+  background-color: $card-bg;
+  border: 0px;
+}
+
+.tabulator-tableHolder::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+.tabulator-tableHolder::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.tabulator-tableHolder::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.tabulator .tabulator-header,
+.tabulator .tabulator-header .tabulator-col {
+  border-bottom: none;
+
+  background-color: transparent;
+  padding-bottom: 5px;
+  border-right: 0px;
+  color: $text-color;
+}
+.tabulator .tabulator-header .tabulator-col {
+  border-bottom: 1px solid #7f8fa6;
+}
+
+.tabulator-header {
+  border-bottom: 1px solid #eee;
+}
+
+.tabulator-row,
+.tabulator-row.tabulator-row-even {
+  color: $text-color;
+  background-color: $card-bg;
+}
+
+.tabulator-row.tabulator-selectable:hover {
+  background-color: darken($card-bg, 10%);
+}
+
+.tabulator-row .tabulator-cell {
+  border-right: none;
+}
+
+div[role="row"] {
+  border-bottom: 1px dashed #7F8FA6;
+}
+
+.sell-btn {
+  color: $text-color;
+  background-color: $danger;
+  border-radius: 15px;
+  height: 18px;
+  width: 50px;
+}

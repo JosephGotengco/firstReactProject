@@ -1,0 +1,49 @@
+$card-border-bg: #bdc3c7;
+$body-bg: #303952;
+$text-color: #dcdde1;
+$card-bg: #273c75;
+$input-bg: #353b48;
+$danger: #f5576c;
+$success: #2ed573;
+$disabled: #7f8fa6;
+
+.account-wrapper {
+    padding-top: 40px;
+}
+
+.profile-wrapper {
+    color: $text-color;
+
+    img {
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.field-wrapper {
+    color: $text-color;
+}
+
+.field-input {
+    padding-left: 5px;
+    color: $text-color;
+    outline: none;
+    border: none;
+    background-color: $card-bg;
+    border-bottom: 2px solid $text-color;
+}
+
+.field-input:hover {
+    background-color: $card-bg;
+}
+
+.field-label {
+    // padding-left: 30px;
+}
+
+.field-icon {
+    align-self: center;
+}
+

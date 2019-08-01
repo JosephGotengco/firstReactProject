@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+#root {
+  background-color: #303952;
+}
+
+nav {
+  background-color: #5352ed;
+}
+
+.nav-title {
+  font-size: 32px;
+  color: #dcdde1;
+  cursor: pointer;
+}
+
+.link {
+  color: #dcdde1;
+}
+
+.container-fluid {
+  padding-top: 15px;
+}
+
+.section-body {
+  font-size: 14px;
+  padding: 10px 10px;
+}
+
+.sub-body {
+  padding: 0 20px;
+}
+
+.center-border {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  border-right: 2px solid #dcdde1;
+}
+
+@media only screen and (max-width: 991.5px) {
+  .center-border {
+    display: none;
+  }
+}
+
+.graph-section {
+  color: #dcdde1;
+  background-color: #273c75;
+  min-height: 700px;
+}
+
+.search-section,
+.trading-section {
+  color: #dcdde1;
+  background-color: #273c75;
+}
+
+.graph-wrapper {
+  height: 500px;
+}
+
+.nav-item {
+  border: none;
+}
+
+.nav-item a {
+  color: #8a8d9a;
+}
+
+.nav-item .active {
+  color: #dcdde1;
+  background-color: #273c75;
+  border: none;
+  border-bottom: 2px solid #2ed573;
+}
+
+.account-icon-wrapper {
+  margin: 0.5rem 1rem;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #bdc3c7;
+  border-radius: 15px;
+}
+
+.account-icon-wrapper img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.account-icon-wrapper img:hover {
+  opacity: 0.7;
+}
+
+.section-header {
+  font-size: 24px;
+  padding: 10px 0;
+  border-bottom: 2px solid #dcdde1;
+}
+
+.sub-header {
+  border-bottom: 1px dashed #dcdde1;
+}
+
+.input-wrapper {
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.currency-select {
+  height: 30px;
+  width: 70px;
+  margin: 0.5rem 1rem;
+}
+
+.currency-select select {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 1rem;
+  color: #dcdde1;
+  background-color: #353b48;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.currency-select .material-icons {
+  color: #dcdde1;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  pointer-events: none;
+}
+
+input[type="text"],
+input[type="number"],
+#order-type,
+#graph-period {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 35px;
+  width: 135px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  color: #dcdde1;
+  background-color: #353b48;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#graph-type {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 35px;
+  width: 180px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  color: #dcdde1;
+  background-color: #353b48;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input:hover,
+select:hover {
+  background-color: #1f232b;
+}
+
+input:not(:focus)::-webkit-input-placeholder {
+  visibility: hidden;
+}
+
+input:not(:focus):-ms-input-placeholder {
+  visibility: hidden;
+}
+
+input:not(:focus)::-ms-input-placeholder {
+  visibility: hidden;
+}
+
+input:not(:focus)::placeholder {
+  visibility: hidden;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.inc-btn {
+  top: 5%;
+}
+
+.dec-btn {
+  top: 40%;
+}
+
+label {
+  pointer-events: none;
+}
+
+label,
+select + label,
+input:empty + label {
+  top: 30%;
+  left: 15%;
+  cursor: text;
+}
+
+label,
+input,
+select {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+input:focus + label,
+input:valid + label,
+select:focus + label,
+select:valid + label {
+  top: -30%;
+  left: 5%;
+  letter-spacing: 1px;
+  height: 20px;
+  padding: 0 5px;
+  font-size: 12px;
+  cursor: default;
+}
+
+i {
+  top: 20%;
+  right: 10%;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #2ed573;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #23ad5c;
+}
+
+.tabulator {
+  margin-top: 20px;
+  background-color: #273c75;
+  border: 0px;
+}
+
+.tabulator-tableHolder::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+.tabulator-tableHolder::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.tabulator-tableHolder::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.tabulator .tabulator-header,
+.tabulator .tabulator-header .tabulator-col {
+  border-bottom: none;
+  background-color: transparent;
+  padding-bottom: 5px;
+  border-right: 0px;
+  color: #dcdde1;
+}
+
+.tabulator .tabulator-header .tabulator-col {
+  border-bottom: 1px solid #7f8fa6;
+}
+
+.tabulator-header {
+  border-bottom: 1px solid #eee;
+}
+
+.tabulator-row,
+.tabulator-row.tabulator-row-even {
+  color: #dcdde1;
+  background-color: #273c75;
+}
+
+.tabulator-row.tabulator-selectable:hover {
+  background-color: #1a284f;
+}
+
+.tabulator-row .tabulator-cell {
+  border-right: none;
+}
+
+div[role="row"] {
+  border-bottom: 1px dashed #7F8FA6;
+}
+
+.sell-btn {
+  color: #dcdde1;
+  background-color: #f5576c;
+  border-radius: 15px;
+  height: 18px;
+  width: 50px;
+}
+/*# sourceMappingURL=trading.css.map */

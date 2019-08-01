@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap");
+input[type="text"], input[type="number"], select {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 35px;
+  width: 135px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  color: #DCDDE1;
+  background-color: #353B48;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input:hover, select:hover {
+  background-color: #1f232b;
+}
+
+input:not(:focus)::-webkit-input-placeholder {
+  visibility: hidden;
+}
+
+input:not(:focus):-ms-input-placeholder {
+  visibility: hidden;
+}
+
+input:not(:focus)::-ms-input-placeholder {
+  visibility: hidden;
+}
+
+input:not(:focus)::placeholder {
+  visibility: hidden;
+}
+/*# sourceMappingURL=input-text.module.css.map */

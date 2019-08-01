@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap');
+
+$body-bg: #303952;
+$text-color: #DCDDE1;
+$card-bg: #273C75;
+$input-bg: #353B48;
+$danger: #F5576C;
+$success: #2ED573;
+$disabled: #7F8FA6;
+
+input[type="text"], input[type="number"], select {
+    box-sizing: border-box;
+    height: 35px;
+    width: 135px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    color: $text-color;
+    background-color: $input-bg;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    appearance: none;
+}
+
+input:hover, select:hover {
+    background-color: darken($input-bg, 10%);
+}
+
+input:not(:focus)::placeholder {
+    visibility: hidden;
+}

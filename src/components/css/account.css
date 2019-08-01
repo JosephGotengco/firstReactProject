@@ -1,0 +1,39 @@
+.account-wrapper {
+  padding: 40px 100px;
+}
+
+.profile-wrapper {
+  color: #dcdde1;
+}
+
+.profile-wrapper img {
+  height: 250px;
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.field-wrapper {
+  color: #dcdde1;
+}
+
+.field-input {
+  padding-left: 5px;
+  color: #dcdde1;
+  outline: none;
+  border: none;
+  background-color: #273c75;
+  border-bottom: 2px solid #dcdde1;
+}
+
+.field-input:hover {
+  background-color: #273c75;
+}
+
+.field-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=account.css.map */
